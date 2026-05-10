@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ebook Ternak Molly Black Golden – Panen Ribuan Ekor/Minggu!</title>
+  <meta name="description" content="Panduan lengkap ternak ikan Molly Black Golden dari rumah. Modal kecil, panen ribuan ekor, omzet hingga Rp8 juta sekali panen!">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: { 300: '#fde68a', 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706', 700: '#b45309' },
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-neutral-950 font-body overflow-x-hidden">
+
+  <!-- ═══════════════════════════════════════
+       FLOATING PARTICLES CANVAS
+  ═══════════════════════════════════════ -->
+  <canvas id="particlesCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+  <!-- ═══════════════════════════════════════
+       FLOATING CTA (MOBILE STICKY)
+  ═══════════════════════════════════════ -->
+  <div id="floatingCTA" class="floating-cta-bar hidden">
+    <a href="https://lynk.id/ebookbisniscuan/46213m0k04lm/checkout" target="_blank" class="floating-cta-btn">
+      🛒 BELI SEKARANG – Rp99.000
+    </a>
+  </div>
+
+  <!-- FLOATING WA BUTTON -->
+  <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20tanya%20tentang%20ebook%20Molly%20Black%20Golden" 
+     target="_blank" class="floating-wa" title="Chat WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor" class="w-7 h-7">
+      <path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.737 5.469 2.027 7.774L0 32l8.454-2.007A15.935 15.935 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.278 13.278 0 01-6.772-1.847l-.484-.288-5.018 1.191 1.237-4.878-.316-.5A13.244 13.244 0 012.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.984c-.398-.199-2.354-1.161-2.719-1.294-.365-.133-.631-.199-.897.2-.266.398-1.029 1.294-1.262 1.56-.232.266-.465.299-.863.1-.398-.2-1.681-.619-3.202-1.975-1.183-1.056-1.981-2.36-2.213-2.758-.232-.398-.025-.614.174-.812.179-.178.398-.465.597-.697.199-.232.265-.398.398-.664.132-.266.066-.499-.033-.697-.1-.2-.897-2.163-1.229-2.96-.324-.776-.653-.671-.897-.683-.232-.011-.499-.013-.764-.013s-.697.1-1.063.499c-.365.398-1.394 1.361-1.394 3.32s1.428 3.85 1.627 4.116c.2.265 2.81 4.292 6.809 6.022.951.41 1.694.655 2.272.839.954.304 1.823.261 2.509.158.766-.114 2.354-.962 2.686-1.891.332-.93.332-1.727.232-1.891-.099-.166-.365-.265-.763-.465z"/>
+    </svg>
+  </a>
+
+  <!-- ═══════════════════════════════════════
+       1. HERO SECTION
+  ═══════════════════════════════════════ -->
+  <section id="hero" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="hero-bg-gradient"></div>
+    <div class="hero-grid-overlay"></div>
+
+    <!-- Animated fish SVGs -->
+    <div class="fish-container">
+      <div class="fish fish-1">🐟</div>
+      <div class="fish fish-2">🐠</div>
+      <div class="fish fish-3">🐡</div>
+      <div class="fish fish-4">🐟</div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10 text-center py-20">
+
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-400 text-sm font-semibold mb-6 hero-badge" data-aos="fade-down">
+        <span class="pulse-dot"></span>
+        🔥 Promo Harga Hari Ini – Stok Terbatas!
+      </div>
+
+      <!-- Main Title -->
+      <h1 class="font-display text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-4" data-aos="fade-up" data-aos-delay="100">
+        Rahasia <span class="text-gold">Ternak Molly</span><br>
+        <span class="text-gold italic">Black Golden</span><br>
+        <span class="text-white/90 text-3xl md:text-5xl">dari Rumah</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+        Mulai dari kolam terpal sederhana sampai<br>
+        <strong class="text-gold-400">panen ribuan ekor</strong> dan potensi omzet<br>
+        <strong class="text-gold-400">jutaan rupiah</strong> tiap panen — dari rumah sendiri!
+      </p>
+
+      <!-- Ebook Mockup 3D -->
+      <div class="ebook-mockup-wrapper" data-aos="zoom-in" data-aos-delay="300">
+        <div class="ebook-mockup">
+          <div class="ebook-cover">
+            <div class="ebook-cover-inner">
+              <div class="ebook-glow-ring"></div>
+              <div class="ebook-icon">🐠</div>
+              <div class="ebook-title-small">EBOOK PREMIUM</div>
+              <div class="ebook-title-big">MOLLY<br>BLACK GOLDEN</div>
+              <div class="ebook-subtitle-small">Panduan Lengkap Ternak</div>
+              <div class="ebook-pages"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats row -->
+      <div class="flex flex-wrap justify-center gap-6 mb-10" data-aos="fade-up" data-aos-delay="350">
+        <div class="stat-chip">⭐ 4.9/5 Rating</div>
+        <div class="stat-chip">👥 2.300+ Pembeli</div>
+        <div class="stat-chip">📦 Ribuan Ekor/Minggu</div>
+      </div>
+
+      <!-- CTA Button -->
+      <div data-aos="fade-up" data-aos-delay="400">
+        <a href="https://lynk.id/ebookbisniscuan/46213m0k04lm/checkout" target="_blank" class="cta-button-hero">
+          <span>BELI SEKARANG</span>
+          <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+        <div class="text-white/50 text-sm mt-3">
+          <span class="line-through text-white/40">Rp299.000</span>
+          &nbsp;→&nbsp;
+          <span class="text-gold-400 font-bold text-lg">Rp99.000</span>
+          &nbsp;Hari Ini Saja!
+        </div>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="flex flex-wrap justify-center gap-4 mt-8" data-aos="fade-up" data-aos-delay="500">
+        <div class="trust-badge">🔒 Pembayaran Aman</div>
+        <div class="trust-badge">⚡ Download Instan</div>
+        <div class="trust-badge">📱 Bisa Baca di HP</div>
+        <div class="trust-badge">✅ Garansi Puas</div>
+      </div>
+
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <div class="scroll-hint-text">Scroll ke bawah</div>
+      <div class="scroll-hint-arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       OMZET COUNTER SECTION
+  ═══════════════════════════════════════ -->
+  <section class="py-12 relative overflow-hidden bg-gradient-to-r from-black via-neutral-900 to-black border-y border-gold-600/20">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="counter-item" data-aos="fade-up">
+          <div class="counter-number" data-target="2300">0</div>
+          <div class="counter-label">Pembeli Puas</div>
+        </div>
+        <div class="counter-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="counter-number" data-target="8" data-prefix="Rp" data-suffix=" Juta">0</div>
+          <div class="counter-label">Potensi Omzet</div>
+        </div>
+        <div class="counter-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="counter-number" data-target="5000" data-suffix="+ Ekor">0</div>
+          <div class="counter-label">Produksi/Bulan</div>
+        </div>
+        <div class="counter-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="counter-number" data-target="4" data-suffix=" Bulan">0</div>
+          <div class="counter-label">Balik Modal</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       2. PAIN POINT / MASALAH
+  ═══════════════════════════════════════ -->
+  <section class="py-20 relative bg-neutral-950">
+    <div class="section-glow-left"></div>
+    <div class="container mx-auto px-4">
+
+      <div class="text-center mb-14" data-aos="fade-up">
+        <div class="section-tag">KENALI MASALAHNYA</div>
+        <h2 class="font-display text-3xl md:text-5xl text-white mt-3">
+          Apakah Kamu <span class="text-gold">Mengalami</span><br>Hal Ini?
+        </h2>
+        <p class="text-white/60 mt-4 max-w-xl mx-auto">Ribuan orang punya mimpi usaha ikan hias tapi stuck di sini...</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+
+        <div class="pain-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="pain-icon">😫</div>
+          <h3>Bingung Mulai dari Mana</h3>
+          <p>Ingin usaha rumahan tapi tidak tahu harus mulai darimana. Semua terasa ribet dan membingungkan.</p>
+        </div>
+
+        <div class="pain-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="pain-icon">💸</div>
+          <h3>Modal Terbatas</h3>
+          <p>Takut keluar modal besar tapi hasilnya tidak sesuai. Khawatir uang habis percuma.</p>
+        </div>
+
+        <div class="pain-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="pain-icon">😰</div>
+          <h3>Takut Gagal Ternak</h3>
+          <p>Sudah pernah coba ternak ikan tapi gagal. Ikan mati, modal habis, semangat ikut hilang.</p>
+        </div>
+
+        <div class="pain-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="pain-icon">🤔</div>
+          <h3>Tidak Tahu Cara Breeding</h3>
+          <p>Tidak paham cara memilih indukan, proses kawin ikan, sampai merawat burayak agar tidak mati.</p>
+        </div>
+
+        <div class="pain-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="pain-icon">💀</div>
+          <h3>Ikan Sering Mati</h3>
+          <p>Sudah beli ikan bagus-bagus tapi mati terus. Entah kena penyakit, kualitas air jelek, atau salah perawatan.</p>
+        </div>
+
+        <div class="pain-card" data-aos="fade-up" data-aos-delay="500">
+          <div class="pain-icon">😤</div>
+          <h3>Tidak Tahu Cara Jual</h3>
+          <p>Ikan sudah banyak tapi bingung mau dijual ke mana. Tidak punya pelanggan, tidak tahu harganya berapa.</p>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-12" data-aos="fade-up">
+        <div class="solution-bridge">
+          Kalau kamu merasakan salah satu di atas... <strong class="text-gold-400">Ebook ini adalah jawabannya.</strong>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       3. SOLUSI
+  ═══════════════════════════════════════ -->
+  <section class="py-20 relative overflow-hidden" style="background: linear-gradient(180deg, #0a0a0a 0%, #111008 50%, #0a0a0a 100%);">
+    <div class="section-glow-right"></div>
+    <div class="container mx-auto px-4">
+
+      <div class="text-center mb-14" data-aos="fade-up">
+        <div class="section-tag">SOLUSINYA ADA DI SINI</div>
+        <h2 class="font-display text-3xl md:text-5xl text-white mt-3">
+          Ebook Ini Akan <span class="text-gold">Membantumu</span>
+        </h2>
+        <p class="text-white/60 mt-4 max-w-xl mx-auto">Panduan step-by-step dari nol sampai panen, khusus untuk pemula</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+        <div class="solution-card" data-aos="flip-left" data-aos-delay="0">
+          <div class="solution-number">01</div>
+          <div class="solution-icon">🎯</div>
+          <h3>Pilih Indukan Bagus</h3>
+          <p>Cara memilih indukan Molly Black Golden yang sehat, produktif, dan punya gen unggul agar burayak berkualitas.</p>
+        </div>
+
+        <div class="solution-card" data-aos="flip-left" data-aos-delay="100">
+          <div class="solution-number">02</div>
+          <div class="solution-icon">🏊</div>
+          <h3>Setup Kolam Terpal</h3>
+          <p>Panduan lengkap ukuran kolam, sistem filter, kualitas air ideal, dan setup hemat biaya dari bahan yang mudah didapat.</p>
+        </div>
+
+        <div class="solution-card" data-aos="flip-left" data-aos-delay="200">
+          <div class="solution-number">03</div>
+          <div class="solution-icon">💞</div>
+          <h3>Teknik Breeding Tepat</h3>
+          <p>Rasio jantan-betina ideal, kondisi pemijahan, dan cara memaksimalkan jumlah burayak setiap siklus.</p>
+        </div>
+
+        <div class="solution-card" data-aos="flip-left" data-aos-delay="300">
+          <div class="solution-number">04</div>
+          <div class="solution-icon">🐣</div>
+          <h3>Rawat Burayak</h3>
+          <p>Cara merawat burayak agar survival rate tinggi — pakan, suhu, pisah kolam, dan jadwal perawatan harian.</p>
+        </div>
+
+        <div class="solution-card" data-aos="flip-left" data-aos-delay="400">
+          <div class="solution-number">05</div>
+          <div class="solution-icon">🚀</div>
+          <h3>Percepat Pertumbuhan</h3>
+          <p>Suplemen alami, jadwal pakan, dan teknik water change untuk mempercepat pertumbuhan ikan hingga 2x lebih cepat.</p>
+        </div>
+
+        <div class="solution-card" data-aos="flip-left" data-aos-delay="500">
+          <div class="solution-number">06</div>
+          <div class="solution-icon">💰</div>
+          <h3>Jual & Omzet Jutaan</h3>
+          <p>Strategi jual ke toko ikan, marketplace online, hingga reseller. Plus simulasi omzet hingga Rp8 juta sekali panen!</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       4. KEUNGGULAN EBOOK
+  ═══════════════════════════════════════ -->
+  <section class="py-20 bg-neutral-950 relative">
+    <div class="container mx-auto px-4">
+
+      <div class="text-center mb-14" data-aos="fade-up">
+        <div class="section-tag">KENAPA PILIH EBOOK INI</div>
+        <h2 class="font-display text-3xl md:text-5xl text-white mt-3">
+          Dirancang Khusus<br><span class="text-gold">untuk Pemula</span>
+        </h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+
+        <div class="checklist-item" data-aos="fade-right" data-aos-delay="0">
+          <div class="check-icon">✅</div>
+          <div>
+            <strong class="text-white">Panduan Lengkap dari Nol</strong>
+            <p class="text-white/60 text-sm mt-1">Tidak perlu pengalaman sebelumnya. Semua dijelaskan dari awal sampai akhir.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item" data-aos="fade-right" data-aos-delay="80">
+          <div class="check-icon">✅</div>
+          <div>
+            <strong class="text-white">Bahasa Mudah Dipahami</strong>
+            <p class="text-white/60 text-sm mt-1">Tidak pakai istilah ribet. Ditulis seperti teman yang mengajari langsung.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item" data-aos="fade-right" data-aos-delay="160">
+          <div class="check-icon">✅</div>
+          <div>
+            <strong class="text-white">Bisa Dimulai dari Rumah</strong>
+            <p class="text-white/60 text-sm mt-1">Pakai lahan kecil di belakang atau samping rumah. Kolam terpal ukuran 1x2 meter sudah cukup.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item" data-aos="fade-right" data-aos-delay="240">
+          <div class="check-icon">✅</div>
+          <div>
+            <strong class="text-white">Modal Sangat Kecil</strong>
+            <p class="text-white/60 text-sm mt-1">Estimasi modal awal mulai dari Rp300 ribu saja. Terjangkau untuk semua kalangan.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item" data-aos="fade-right" data-aos-delay="320">
+          <div class="check-icon">✅</div>
+          <div>
+            <strong class="text-white">Step by Step Terstruktur</strong>
+            <p class="text-white/60 text-sm mt-1">Ikuti langkah demi langkah. Tidak bingung mau mulai dari mana.</p>
+          </div>
+        </div>
+
+        <div class="checklist-item" data-aos="fade-right" data-aos-delay="400">
+          <div class="check-icon">✅</div>
+          <div>
+            <strong class="text-white">Langsung Bisa Dipraktikkan</strong>
+            <p class="text-white/60 text-sm mt-1">Beli hari ini, baca siang ini, mulai praktik besok pagi. Secepat itu!</p>
+          </div>
+        </div>
+
+        <div class="checklist-item" data-aos="fade-right" data-aos-delay="480">
+          <div class="check-icon">✅</div>
+          <div>
+            <strong class="text-white">Cocok Ibu Rumah Tangga & Pensiunan</strong>
+            <p class="text-white/60 text-sm mt-1">Tidak butuh skill khusus. Siapapun bisa menjalankannya di waktu luang.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       5. TESTIMONI
+  ═══════════════════════════════════════ -->
+  <section class="py-20 relative overflow-hidden" style="background: linear-gradient(135deg, #0d0d0d, #111208, #0d0d0d);">
+    <div class="section-glow-center"></div>
+    <div class="container mx-auto px-4">
+
+      <div class="text-center mb-14" data-aos="fade-up">
+        <div class="section-tag">KATA MEREKA YANG SUDAH BELI</div>
+        <h2 class="font-display text-3xl md:text-5xl text-white mt-3">
+          Ribuan Orang Sudah<br><span class="text-gold">Merasakan Hasilnya</span>
+        </h2>
+      </div>
+
+      <!-- Testimonial Slider -->
+      <div class="testimonial-wrapper" data-aos="fade-up">
+        <div class="testimonial-track" id="testimonialTrack">
+
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <div class="verified-badge">✔ Verified Buyer</div>
+            <p class="testi-text">"Awalnya coba-coba pakai kolam terpal belakang rumah, sekarang tiap panen bisa tembus <strong class="text-gold-400">Rp7 juta lebih!</strong> Gak nyangka usaha ikan hias secuan ini. Makasih ebook-nya!"</p>
+            <div class="testi-author">
+              <div class="avatar avatar-1">BR</div>
+              <div>
+                <div class="author-name">Budi Raharjo</div>
+                <div class="author-city">Yogyakarta, DIY</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <div class="verified-badge">✔ Verified Buyer</div>
+            <p class="testi-text">"Saya ibu rumah tangga, awalnya ragu banget. Tapi setelah baca ebook ini, saya langsung coba dan sekarang sudah punya <strong class="text-gold-400">pelanggan tetap 3 toko ikan</strong> di kota saya!"</p>
+            <div class="testi-author">
+              <div class="avatar avatar-2">SR</div>
+              <div>
+                <div class="author-name">Siti Rahmawati</div>
+                <div class="author-city">Malang, Jawa Timur</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <div class="verified-badge">✔ Verified Buyer</div>
+            <p class="testi-text">"Dulu ikan selalu mati, udah hopeless. Setelah pakai teknik di ebook ini, <strong class="text-gold-400">burayak yang hidup bisa 90% lebih!</strong> Beneran beda banget hasilnya."</p>
+            <div class="testi-author">
+              <div class="avatar avatar-3">DP</div>
+              <div>
+                <div class="author-name">Dedi Prasetyo</div>
+                <div class="author-city">Solo, Jawa Tengah</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <div class="verified-badge">✔ Verified Buyer</div>
+            <p class="testi-text">"Baru 2 bulan belajar dari ebook ini, sekarang hasil jualan ikan <strong class="text-gold-400">udah bisa bantu bayar cicilan motor</strong> tiap bulan. Istri sampai heran kenapa suami asik di kolam terus 😄"</p>
+            <div class="testi-author">
+              <div class="avatar avatar-4">AH</div>
+              <div>
+                <div class="author-name">Agus Hermawan</div>
+                <div class="author-city">Bekasi, Jawa Barat</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <div class="verified-badge">✔ Verified Buyer</div>
+            <p class="testi-text">"Ternyata usaha ikan hias lebih cuan dari yang saya bayangkan! <strong class="text-gold-400">Bulan ketiga saya sudah ekspansi ke 3 kolam</strong> dan panen makin banyak. Highly recommended!"</p>
+            <div class="testi-author">
+              <div class="avatar avatar-5">NL</div>
+              <div>
+                <div class="author-name">Nurul Larasati</div>
+                <div class="author-city">Surabaya, Jawa Timur</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <div class="verified-badge">✔ Verified Buyer</div>
+            <p class="testi-text">"Saya pensiunan, pikir-pikir mau ngisi waktu sama usaha kecil. Ebook ini <strong class="text-gold-400">benar-benar mengubah hidup saya.</strong> Sekarang punya penghasilan tambahan dari rumah."</p>
+            <div class="testi-author">
+              <div class="avatar avatar-6">TW</div>
+              <div>
+                <div class="author-name">Taufik Wahyudi</div>
+                <div class="author-city">Bandung, Jawa Barat</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slider controls -->
+        <div class="testi-controls">
+          <button class="testi-prev" onclick="prevTestimonial()">‹</button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button class="testi-next" onclick="nextTestimonial()">›</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       6. ISI EBOOK / BAB
+  ═══════════════════════════════════════ -->
+  <section class="py-20 bg-neutral-950 relative">
+    <div class="container mx-auto px-4">
+
+      <div class="text-center mb-14" data-aos="fade-up">
+        <div class="section-tag">APA YANG AKAN KAMU PELAJARI</div>
+        <h2 class="font-display text-3xl md:text-5xl text-white mt-3">
+          10 Bab Lengkap<br><span class="text-gold">Siap Bawa Kamu Panen</span>
+        </h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-3" id="accordionContainer">
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="acc-left">
+              <span class="acc-icon">🐠</span>
+              <span class="acc-num">Bab 1</span>
+              <span class="acc-title">Mengenal Molly Black Golden</span>
+            </div>
+            <span class="acc-arrow">▼</span>
+          </div>
+          <div class="accordion-body">
+            <p>Sejarah dan asal-usul ikan Molly Black Golden, karakteristik uniknya, mengapa ikan ini cocok untuk pemula, dan potensi bisnisnya yang luar biasa.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="60">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="acc-left">
+              <span class="acc-icon">🔍</span>
+              <span class="acc-num">Bab 2</span>
+              <span class="acc-title">Cara Pilih Indukan Berkualitas</span>
+            </div>
+            <span class="acc-arrow">▼</span>
+          </div>
+          <div class="accordion-body">
+            <p>Ciri-ciri indukan jantan dan betina unggul, cara membedakan ikan sehat vs sakit, tips beli di mana yang terpercaya dan murah.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="120">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="acc-left">
+              <span class="acc-icon">🏊</span>
+              <span class="acc-num">Bab 3</span>
+              <span class="acc-title">Setup Kolam Terpal dari Nol</span>
+            </div>
+            <span class="acc-arrow">▼</span>
+          </div>
+          <div class="accordion-body">
+            <p>Ukuran kolam ideal, bahan dan alat yang diperlukan, cara pasang sistem aerasi dan filter sederhana, estimasi biaya setup kolam dari Rp300 ribu.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="180">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="acc-left">
+              <span class="acc-icon">💧</span>
+              <span class="acc-num">Bab 4</span>
+              <span class="acc-title">Manajemen Kualitas Air</span>
+            </div>
+            <span class="acc-arrow">▼</span>
+          </div>
+          <div class="accordion-body">
+            <p>Parameter air ideal (pH, suhu, kekerasan), jadwal ganti air, cara atasi air keruh dan bau, tanda-tanda air kolam tidak sehat.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="240">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="acc-left">
+              <span class="acc-icon">💞</span>
+              <span class="acc-num">Bab 5</span>
+              <span class="acc-title">Teknik Breeding & Pemijahan</span>
+            </div>
+            <span class="acc-arrow">▼</span>
+          </div>
+          <div class="accordion-body">
+            <p>Rasio jantan:betina ideal, kondisi pemijahan, cara memisahkan betina hamil, estimasi jumlah burayak per siklus, dan siklus bertelur.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="acc-left">
+              <span class="acc-icon">🐣</span>
+              <span class="acc-num">Bab 6</span>
+              <span class="acc-title">Merawat Burayak agar Survival</span>
+            </div>
+            <span class="acc-arrow">▼</span>
+          </div>
+          <div class="accordion-body">
+            <p>Pakan terbaik untuk burayak, ukuran pakan sesuai umur, cara pisah kolam burayak, jadwal perawatan harian agar survival rate 80-90%.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="360">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="acc-left">
+              <span class="acc-icon">🍽️</span>
+              <span class="acc-num">Bab 7</span>
+              <span class="acc-title">Pakan dan Nutrisi Optimal</span>
+            </div>
+            <span class="acc-arrow">▼</span>
+          </div>
+          <div class="accordion-body">
+            <p>Jenis pakan terbaik, jadwal pakan harian, suplemen alami penambah nafsu makan, cara buat pakan sendiri yang hemat dan bergizi.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="420">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="acc-left">
+              <span class="acc-icon">💊</span>
+              <span class="acc-num">Bab 8</span>
+              <span class="acc-title">Penyakit & Cara Mengatasinya</span>
+            </div>
+            <span class="acc-arrow">▼</span>
+          </div>
+          <div class="accordion-body">
+            <p>Penyakit umum Molly (white spot, busuk sirip, kembung), gejala awal yang harus diperhatikan, obat murah yang bisa dibeli di toko ikan.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="480">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="acc-left">
+              <span class="acc-icon">📈</span>
+              <span class="acc-num">Bab 9</span>
+              <span class="acc-title">Strategi Jual Hasil Ternak</span>
+            </div>
+            <span class="acc-arrow">▼</span>
+          </div>
+          <div class="accordion-body">
+            <p>Cara jual ke toko ikan, cara jual online (Shopee, Tokopedia, Instagram), cara cari reseller, tips negosiasi harga, dan strategi panen rutin.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" data-aos="fade-up" data-aos-delay="540">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="acc-left">
+              <span class="acc-icon">💹</span>
+              <span class="acc-num">Bab 10</span>
+              <span class="acc-title">Simulasi Bisnis & Omzet Jutaan</span>
+            </div>
+            <span class="acc-arrow">▼</span>
+          </div>
+          <div class="accordion-body">
+            <p>Perhitungan modal awal, proyeksi panen bulan 1-6, simulasi omzet hingga Rp8 juta/panen, tips scale-up bisnis ikan hias secara bertahap.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       7. BONUS SECTION
+  ═══════════════════════════════════════ -->
+  <section class="py-20 relative overflow-hidden" style="background: linear-gradient(135deg, #0c0b07, #111208 50%, #0c0b07);">
+    <div class="section-glow-center"></div>
+    <div class="container mx-auto px-4">
+
+      <div class="text-center mb-14" data-aos="fade-up">
+        <div class="section-tag bonus-tag">🎁 BONUS EKSKLUSIF</div>
+        <h2 class="font-display text-3xl md:text-5xl text-white mt-3">
+          Gratis! <span class="text-gold">4 Bonus Spesial</span><br>
+          <span class="text-xl text-white/70 font-body font-normal">Hanya untuk pembelian hari ini</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+        <div class="bonus-card" data-aos="zoom-in" data-aos-delay="0">
+          <div class="bonus-glow"></div>
+          <div class="bonus-icon-big">🛒</div>
+          <div class="bonus-badge">BONUS 1</div>
+          <h3>Tips Cari Supplier Murah</h3>
+          <p>Daftar supplier ikan hias dan pakan terpercaya di seluruh Indonesia dengan harga terbaik.</p>
+          <div class="bonus-value">Nilai: Rp79.000</div>
+        </div>
+
+        <div class="bonus-card" data-aos="zoom-in" data-aos-delay="150">
+          <div class="bonus-glow"></div>
+          <div class="bonus-icon-big">📱</div>
+          <div class="bonus-badge">BONUS 2</div>
+          <h3>Panduan Jual Ikan Online</h3>
+          <p>Cara buka toko di Shopee, Tokopedia, Instagram, dan TikTok Shop. Termasuk template deskripsi produk yang terbukti laku.</p>
+          <div class="bonus-value">Nilai: Rp99.000</div>
+        </div>
+
+        <div class="bonus-card" data-aos="zoom-in" data-aos-delay="300">
+          <div class="bonus-glow"></div>
+          <div class="bonus-icon-big">🤝</div>
+          <div class="bonus-badge">BONUS 3</div>
+          <h3>Strategi Cari Reseller</h3>
+          <p>Template pesan untuk rekrut reseller, sistem komisi yang menguntungkan, dan cara bangun jaringan penjualan di kotamu.</p>
+          <div class="bonus-value">Nilai: Rp59.000</div>
+        </div>
+
+        <div class="bonus-card" data-aos="zoom-in" data-aos-delay="450">
+          <div class="bonus-glow"></div>
+          <div class="bonus-icon-big">📋</div>
+          <div class="bonus-badge">BONUS 4</div>
+          <h3>Checklist Setup Kolam</h3>
+          <p>Daftar lengkap semua yang perlu disiapkan sebelum mulai ternak. Tidak ada yang terlewat, dijamin siap dari hari pertama.</p>
+          <div class="bonus-value">Nilai: Rp39.000</div>
+        </div>
+
+      </div>
+
+      <div class="total-bonus" data-aos="zoom-in">
+        <span class="text-white/60">Total Nilai Bonus:</span>
+        <span class="line-through text-white/50 ml-2">Rp276.000</span>
+        <span class="text-gold-400 font-bold text-xl ml-2">GRATIS!</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       8. HARGA / PRICING
+  ═══════════════════════════════════════ -->
+  <section id="harga" class="py-20 bg-neutral-950 relative">
+    <div class="container mx-auto px-4">
+
+      <div class="text-center mb-10" data-aos="fade-up">
+        <div class="section-tag">INVESTASI TERBAIK KAMU</div>
+        <h2 class="font-display text-3xl md:text-5xl text-white mt-3">
+          Dapatkan Semuanya<br><span class="text-gold">Hanya Hari Ini</span>
+        </h2>
+      </div>
+
+      <!-- Countdown Timer -->
+      <div class="countdown-wrapper" data-aos="fade-up">
+        <div class="countdown-label">⏰ Promo berakhir dalam:</div>
+        <div class="countdown-timer" id="countdownTimer">
+          <div class="time-block">
+            <span id="hours">00</span>
+            <small>Jam</small>
+          </div>
+          <div class="time-sep">:</div>
+          <div class="time-block">
+            <span id="minutes">00</span>
+            <small>Menit</small>
+          </div>
+          <div class="time-sep">:</div>
+          <div class="time-block">
+            <span id="seconds">00</span>
+            <small>Detik</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pricing Card -->
+      <div class="pricing-card" data-aos="zoom-in">
+        <div class="pricing-badge-promo">🔥 PROMO TERBATAS</div>
+
+        <div class="pricing-what">Yang kamu dapatkan:</div>
+        <ul class="pricing-includes">
+          <li>📘 Ebook Ternak Molly Black Golden (200+ halaman)</li>
+          <li>🎁 Bonus 1: Tips Supplier Murah</li>
+          <li>🎁 Bonus 2: Panduan Jual Online</li>
+          <li>🎁 Bonus 3: Strategi Reseller</li>
+          <li>🎁 Bonus 4: Checklist Setup Kolam</li>
+          <li>⚡ Akses Seumur Hidup</li>
+          <li>📱 Bisa dibaca di HP, tablet, laptop</li>
+        </ul>
+
+        <div class="pricing-old">Harga Normal: <span>Rp299.000</span></div>
+        <div class="pricing-new">Rp99.000</div>
+        <div class="pricing-save">Hemat Rp200.000 — Hari Ini Saja!</div>
+
+        <a href="https://lynk.id/ebookbisniscuan/46213m0k04lm/checkout" target="_blank" class="pricing-cta">
+          <span>BELI SEKARANG & DOWNLOAD LANGSUNG</span>
+          <svg class="w-5 h-5 ml-2 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </a>
+
+        <div class="pricing-guarantee">🔒 Pembayaran 100% Aman &nbsp;|&nbsp; ⚡ Download Langsung Setelah Bayar</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       9. FINAL CTA
+  ═══════════════════════════════════════ -->
+  <section class="py-24 final-cta-section relative overflow-hidden">
+    <div class="final-cta-bg"></div>
+    <div class="final-cta-glow"></div>
+    <div class="container mx-auto px-4 relative z-10 text-center">
+
+      <div data-aos="fade-up">
+        <div class="section-tag">TUNGGU APA LAGI?</div>
+        <h2 class="font-display text-4xl md:text-6xl text-white mt-4 leading-tight">
+          Mulai Bangun<br>
+          <span class="text-gold">Usaha Rumahan</span><br>
+          dari Sekarang!
+        </h2>
+        <p class="text-white/70 text-lg mt-6 max-w-xl mx-auto">
+          Jangan biarkan kesempatan ini lewat. Ribuan orang sudah memulai perjalanan mereka dengan ebook ini. Sekarang giliran kamu!
+        </p>
+      </div>
+
+      <div class="mt-10" data-aos="zoom-in" data-aos-delay="200">
+        <a href="https://lynk.id/ebookbisniscuan/46213m0k04lm/checkout" target="_blank" class="final-cta-btn">
+          <span>DOWNLOAD EBOOK SEKARANG</span>
+          <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        </a>
+        <div class="text-white/50 text-sm mt-4">
+          Hanya <strong class="text-gold-400">Rp99.000</strong> — Akses Seumur Hidup — Download Instan
+        </div>
+      </div>
+
+      <div class="final-trust-row" data-aos="fade-up" data-aos-delay="300">
+        <div class="final-trust-item">🔒 Pembayaran Aman</div>
+        <div class="final-trust-item">⚡ Download Instan</div>
+        <div class="final-trust-item">📱 Bisa Baca di HP</div>
+        <div class="final-trust-item">✅ Garansi Puas</div>
+        <div class="final-trust-item">🌟 Support 24/7</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="bg-black border-t border-white/10 py-10">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <div class="footer-logo">🐠 Ebook Ternak Molly</div>
+        <p class="text-white/40 text-sm mt-4 max-w-xl mx-auto leading-relaxed">
+          Produk ini adalah <strong class="text-white/60">ebook digital</strong> (file PDF) yang dikirimkan secara elektronik setelah pembayaran dikonfirmasi. Ebook bersifat informasi edukasi dan hasil dapat bervariasi tergantung usaha masing-masing individu.
+        </p>
+        <div class="footer-social mt-6">
+          <a href="#" class="footer-social-link">📘 Facebook</a>
+          <a href="#" class="footer-social-link">📸 Instagram</a>
+          <a href="#" class="footer-social-link">🎵 TikTok</a>
+          <a href="#" class="footer-social-link">💬 WhatsApp</a>
+        </div>
+        <div class="text-white/30 text-xs mt-6">
+          © 2025 Ebook Ternak Molly Black Golden. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
